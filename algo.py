@@ -7,14 +7,14 @@ from datetime import datetime, timedelta
 from pytz import timezone
 import config
 # Replace these with your API connection info from the dashboard
-#base_url = 'Your API URL'
-#api_key_id = 'Your API Key'
-#api_secret = 'Your API Secret'
+base_url = config.base_url
+api_key_id = config.api_key_id
+api_secret = config.api_secret
 
 api = tradeapi.REST(
-    base_url=config.base_url,
-    key_id=config.api_key_id,
-    secret_key=config.api_secret
+    base_url=base_url,
+    key_id=api_key_id,
+    secret_key=api_secret
 )
 
 session = requests.session()
